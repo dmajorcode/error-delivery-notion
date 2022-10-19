@@ -2,7 +2,6 @@
 import "./Detail.css";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { type2List, type2List_1 } from "../data/BugType";
 
 function Detail() {
   const type1List = [
@@ -35,7 +34,7 @@ function Detail() {
     "Log-in Issues",
     "Collection or Display Issues",
   ];
-  
+
   const type2List_2 = [
     "Connecting and Using Wallets",
     "Transaction Issues",
@@ -51,12 +50,12 @@ function Detail() {
     "1020 Error",
     "API Error 400",
   ];
-  
+
   const type2List_5 = [
     "I cannot see my NFTs on Terra",
     "I cannot find my NFTs on Polygon",
   ];
-  
+
   const type2List_6 = [
     "I was scammed",
     "I'm reporting a fake collection",

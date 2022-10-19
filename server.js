@@ -4,7 +4,6 @@ import path from "path";
 import "dotenv/config";
 import bodyParser from "body-parser";
 import cors from "cors";
-import { fileURLToPath } from "url";
 
 export const notion = new Client({ auth: process.env.NOTION_ACCESS_TOKEN });
 export const databaseId = process.env.NOTION_DATABASE_ID;
@@ -14,8 +13,6 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
-
-const PORT = 8000;
 
 // POST request
 // POST Subject, Error Type, Description
@@ -76,10 +73,5 @@ const handlePost = async (req, res) => {
 };
 
 app.post("/submit", jsonParser, handlePost);
-
-const handleListening = () =>
-  console.log(`Server is listening on http://localhost:${PORT} 🚀`);
-
-app.listen(PORT, handleListening);
 
 export default app;

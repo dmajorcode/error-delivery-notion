@@ -1,3 +1,4 @@
+// should refactor codes to use this file
 function type2List() {
   const type2List_1 = [
     "Getting Started",
