@@ -1,6 +1,6 @@
 import express from "express";
 import { Client } from "@notionhq/client";
-import path from "path";
+
 import "dotenv/config";
 import bodyParser from "body-parser";
 import cors from "cors";
@@ -13,6 +13,8 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
+
+const PORT = 8000;
 
 // POST request
 // POST Subject, Error Type, Description
@@ -73,5 +75,9 @@ const handlePost = async (req, res) => {
 };
 
 app.post("/submit", jsonParser, handlePost);
+
+const handleListening = () => console.log(`Server is listening`);
+
+app.listen(PORT, handleListening);
 
 export default app;
