@@ -10,7 +10,6 @@ function type2List() {
     "Payments",
   ];
   const type2List_3 = ["Buying", "Selling"];
-  // 이부분 하고 있음
   const type2List_4 = [
     "Oops Something Went Wrong",
     "Failed to Fetch",
