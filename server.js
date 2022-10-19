@@ -23,14 +23,6 @@ const PORT = 8000;
 
 const handlePost = async (req, res) => {
   //req.body
-  /**
-   * {
-   * type1: "Buying and Selling NFTs,"
-   * type2: "Buying",
-   * subject : "I cannot buy Galactic Punk",
-   * description: "This happend when I tried to buy an NFT listed"
-   * }
-   */
   const type1 = req.body.type1;
   const type2 = req.body.type2;
   const subject = req.body.subject;
@@ -77,7 +69,6 @@ const handlePost = async (req, res) => {
         },
       },
     });
-    console.log(await response);
     console.log("success");
   } catch (e) {
     console.log(e);
